@@ -55,9 +55,9 @@ for i, question in enumerate(questions):
         selected_responses = random.sample(open_responses, 2)
         st.write("**Selected responses:**")
         for resp in selected_responses:
-            st.markdown(f'<p style="color:#2F4F2F; font-style:italic;">"{resp}"</p>', unsafe_allow_html=True)
+            st.markdown(f'<p style="color:#8B4789; font-style:italic;">"{resp}"</p>', unsafe_allow_html=True)
     elif len(open_responses) == 1:
         st.write("**Selected response:**")
-        st.markdown(f'<p style="color:#2F4F2F; font-style:italic;">"{open_responses[0]}"</p>', unsafe_allow_html=True)
+        st.markdown(f'<p style="color:#8B4789; font-style:italic;">"{open_responses[0]}"</p>', unsafe_allow_html=True)
     
     st.divider()
