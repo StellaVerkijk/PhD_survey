@@ -12,7 +12,9 @@ bin_columns = [col for col in df.columns if col.endswith('-bin')]
 open_columns = [col for col in df.columns if col.endswith('-open')]
 
 # Main app
-st.header("Six PhD cadidates in the Humanities reacting to seven (awkward) statements about doing a PhD")
+#st.header("Six PhD cadidates in the Humanities reacting to seven (awkward) statements about doing a PhD")
+
+st.markdown('<h3 style="color:#C71585;">"Six PhD cadidates in the Humanities reacting to seven (awkward) statements about doing a PhD"</h3>', unsafe_allow_html=True)
 
 # Process each question
 for i, question in enumerate(questions):
