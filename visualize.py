@@ -28,9 +28,9 @@ for i, question in enumerate(questions):
     
     for col in bin_columns:
         response = df.loc[i, col]
-        if response == 'Yes':
+        if response == 'True':
             yes_count += 1
-        elif response == 'No':
+        elif response == 'False':
             no_count += 1
     
     total = yes_count + no_count
@@ -38,14 +38,14 @@ for i, question in enumerate(questions):
     # Display the counts
     col1, col2, col3 = st.columns([2, 2, 6])
     with col1:
-        st.metric("Yes", yes_count)
+        st.metric("True", yes_count)
     with col2:
-        st.metric("No", no_count)
+        st.metric("False", no_count)
     
     # Create a visual scale using progress bar
     if total > 0:
         yes_percentage = yes_count / total
-        st.progress(yes_percentage, text=f"{yes_count} Yes  |  {no_count} No")
+        st.progress(yes_percentage, text=f"{yes_count} True  |  {no_count} False")
     
     # Get all open responses for this question
     open_responses = []
