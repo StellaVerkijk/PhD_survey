@@ -28,9 +28,9 @@ for i, question in enumerate(questions):
     
     for col in bin_columns:
         response = df.loc[i, col]
-        if response == 'True':
+        if response == 'Yes':
             yes_count += 1
-        elif response == 'False':
+        elif response == 'No':
             no_count += 1
     
     total = yes_count + no_count
